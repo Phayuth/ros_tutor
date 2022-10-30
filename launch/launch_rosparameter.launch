@@ -1,0 +1,4 @@
+<launch>
+	<param name="param_1" value="5"/>
+	<param name="param_2" value="String"/>
+</launch>
