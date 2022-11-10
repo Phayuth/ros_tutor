@@ -1,0 +1,2 @@
+check_urdf file.urdf
+urdf_to_graphiz file.urdf
