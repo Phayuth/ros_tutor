@@ -1,0 +1,7 @@
+<launch>
+
+	<rosparam command="load" file="$(find ros_yaml)/config/simple_load.yaml" />
+
+	<rosparam command="load" file="$(find ros_yaml)/config/adv_load.yaml" />
+
+</launch>
