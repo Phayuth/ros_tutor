@@ -1,0 +1,19 @@
+<launch>
+  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find ros_control_my_robot)/config/rviz.rviz" />
+
+  <rosparam file="$(find ros_control_my_robot)/config/controller.yaml" command="load"/>
+
+  <param name="robot_description" textfile="$(find ros_control_my_robot)/robot/single_joint.urdf"/>
+
+  <!-- load the controllers -->
+  <node name="controller_spawner" 
+  pkg="controller_manager" 
+  type="spawner" 
+  respawn="false"
+  output="screen" 
+  args="joint_1_joint_position_controller joint_state_controller"/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+</launch>

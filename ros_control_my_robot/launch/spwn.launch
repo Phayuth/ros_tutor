@@ -1,0 +1,14 @@
+<launch>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch" >
+    <arg name="paused" value="true" />
+  </include>
+
+  <node name="spawn_gazebo_model" 
+  pkg="gazebo_ros" 
+  type="spawn_model" 
+  args="-file $(find ros_control_my_robot)/robot/single_joint.urdf -urdf -x 0 -y 0 -z 0 -model single_joint" />
+
+  <include file="$(find ros_control_my_robot)/launch/ln.launch" />
+
+</launch>
