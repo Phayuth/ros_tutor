@@ -1,0 +1,3 @@
+<launch>
+	<node name="name" pkg="ros_tutor" type="srv_client" output="screen" args="2 5 5" />
+</launch>

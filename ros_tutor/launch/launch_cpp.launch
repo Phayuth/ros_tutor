@@ -1,0 +1,4 @@
+<launch>
+	<node name="pub" pkg="ros_tutor" type="pub_string" output="screen"/>
+	<node name="sub" pkg="ros_tutor" type="sub_string" output="screen"/>
+</launch>

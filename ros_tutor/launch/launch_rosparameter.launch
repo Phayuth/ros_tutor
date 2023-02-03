@@ -1,0 +1,19 @@
+<launch>
+	<!-- Global Parameter -->
+	<param name="param_1" value="5"/>
+	<param name="param_2" value="String"/>
+
+	<!-- Parent Parameter -->
+	<group ns="Group_param">
+		<param name="param_1" value="5"/>
+		<param name="param_2" value="String"/>
+
+		<!-- Group in Parent -->
+		<group ns="gains">
+			<param name="P" value="1.0" />
+			<param name="I" value="2.0" />
+			<param name="D" value="3.0" />
+		</group>
+
+	</group>
+</launch>
